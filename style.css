@@ -7,6 +7,8 @@
     --grey--: #FFFFFF99;
     --bg-color--: #001530;
     --p-ff--: arial;
+    --secondary-clr--:#001C3F;
+    --third-clr--:#8E92B333;
 
 }
 
@@ -57,7 +59,15 @@ h1 {
 
 h2 {
     color: var(--white--);
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+h3 {
+    color: var(--white--);
+    font-size: 2.1rem;
+}
+h4 {
+    color: var(--white--);
+    font-size: 1.5rem;
 }
 
 p {
@@ -70,7 +80,7 @@ a{
 }
 
 .btn {
-    background-color: #3EAFFF;
+    background-color: var(--sky-blue--);
     color: var(--grey--);
     border-radius: 5px;
     padding: .6rem 1.5rem;
@@ -84,7 +94,8 @@ a{
 
 
 .section1 {
-    min-height: 100vh;
+    min-height: 80vh;
+   
 
     background-color: var(--bg-color--);
 }
@@ -154,7 +165,7 @@ nav .options ul {
 
 .homecontainer {
     position: relative;
-    margin: 5vh 5vw;
+    margin: 5rem 5rem 0 5rem;
 
 
     display: grid;
@@ -190,7 +201,7 @@ nav .options ul {
 
 .workprocess {
     margin-block: 5vh;
-    background-color: #001C3F;
+    background-color: var(--secondary-clr--);
     display: grid;
     padding-block: 1rem;
     gap: 1rem;
@@ -201,11 +212,18 @@ nav .options ul {
         "a c d";
 }
 
-.workprocess .vdo {
+.workprocess .box1 {
     grid-area: a;
+    
+    height: 9rem;
+    width: 9rem;
+    background-color: var(--third-clr--);
+    margin: 2rem;
+    border-radius: 10%;
+    
 }
 
-.workprocess h2 {
+.workprocess h3 {
     grid-area: b;
     align-self: center;
 }
@@ -230,7 +248,7 @@ nav .options ul {
 }
 
 .homeimg .graphicimg img{
-   width: 32rem;
+   width: 30rem;
   
     
 }
@@ -294,3 +312,95 @@ nav .options ul {
 
     }
    }
+
+
+
+
+
+  .section2{
+   
+    min-height: 60vh;
+    background-color: var(--bg-color--);
+  }
+
+   .section2 .services{
+    display: grid;
+    gap: 4rem;
+   padding: 5rem;
+    grid-template-columns: 1fr min-content 1fr;
+   }
+
+   .serviceleft{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+   }
+
+  
+   .serviceleft .serviceleftinfo{
+    display: flex;
+    gap: 1.5rem;
+   
+   }
+
+   .serviceleft .serviceleftinfo .box2{
+    border-radius: 10%;
+    height: 9rem;
+    width: 5rem;
+    background-color: var(--secondary-clr--);
+    flex-basis: 30%;
+   }
+   .serviceleft .serviceleftinfo .info{
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   
+   }
+
+   
+ 
+
+
+
+
+
+
+
+   .devider{
+    height: 80%;
+    width: .2rem;
+    background-color:var(--third-clr--);
+   }
+
+
+.services .serviceright{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 4rem;
+}
+.serviceright :nth-child(3){
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+@media screen and (max-width: 680px){
+    .section2 .services{
+       grid-template-columns: 1fr;
+        
+    }
+    .devider{
+        display: none;
+    }
+  
+    .serviceright > * >*{
+        text-align: center;
+    }
+    .serviceright :nth-child(3){
+        justify-content: center;
+    }
+
+}
