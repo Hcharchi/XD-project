@@ -89,6 +89,15 @@ a{
     font-size: .8rem;
 }
 
+.blur{
+    position: absolute;
+    
+    height: 10%;
+    width: 10%;
+    background: transparent linear-gradient(153deg, #3EAFFF63 0%, #5BC3917A 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    filter: blur(50px);
+}
 
 /* section1...........................................................section1 */
 
@@ -147,16 +156,18 @@ nav .options ul {
 
 /* left side */
 
-.blurclr {
+
+.homeblurclr {
     height: 15%;
-    width: 20%;
+    width: 15%;
 
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 30%;
-    background: transparent linear-gradient(153deg, #3EAFFF63 0%, #5BC3917A 100%) 0% 0% no-repeat padding-box;
+    z-index: -1;
+    /* background: transparent linear-gradient(153deg, #3EAFFF63 0%, #5BC3917A 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
-    filter: blur(50px);
+    filter: blur(50px); */
 
 
 
@@ -178,6 +189,7 @@ nav .options ul {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    isolation: isolate;
 
 }
 
@@ -374,11 +386,25 @@ nav .options ul {
    }
 
 
+
+
 .services .serviceright{
     display: flex;
     flex-direction: column;
     
     gap: 4rem;
+}
+.services .serviceright .servicerightinfo{
+    position: relative;
+    isolation: isolate;
+}
+
+.servicerightinfo .servicerightblur{
+    height: 40%;
+    width: 30%;
+    top: -10%;
+    left: -10%;
+    z-index: -1;
 }
 .serviceright :nth-child(3){
     display: flex;
@@ -403,4 +429,54 @@ nav .options ul {
         justify-content: center;
     }
 
+}
+
+
+
+
+
+
+.section3{
+    min-height: 50vh;
+    background-color: var(--bg-color--);
+
+}
+.section3 .clintworld{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5rem;
+    
+    align-items: center;
+}
+
+.section3 .clintworld >*{
+   text-align: center;
+}
+
+
+
+.clintworld .clintworldservices{
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+
+}
+
+.clintworld .clintworldservices .cwslogo{
+    padding: auto;
+    flex-basis: 150px;
+    flex-grow: 1;
+
+    display: flex;
+   
+
+   
+}
+
+.cwslogo img{
+    width: 13rem;
+    margin: auto;
 }
